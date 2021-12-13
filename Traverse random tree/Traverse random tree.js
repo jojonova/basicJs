@@ -42,10 +42,12 @@ function DFSRecursion(root, arr = []) {
   children.forEach((child) => DFSRecursion(child, arr))
   return arr
 }
-function depthFirstTraversal(root, arr = []) {
+function DFSwithStack(root, arr = []) {
   if (!root) return arr
   let stack = [root],
     current
+  //*使用栈，先进后出，遍历顺序和递归是一样的
+  //*不知道终止层数用→while
   while ((current = stack.pop())) {
     const { element, children } = current
     arr.push(element)
@@ -54,10 +56,11 @@ function depthFirstTraversal(root, arr = []) {
   return arr
 }
 
-function BFS(root, arr = []) {
+function BFSwithQueue(root, arr = []) {
   if (!root) return
   let queue = [root],
     current
+  //*队列先进先出
   while ((current = queue.shift())) {
     const { element, children } = current
     arr.push(element)
