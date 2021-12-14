@@ -31,9 +31,9 @@ function randomTree(n, type = 'string') {
   return root
 }
 
-// root1=JSON.parse(JSON.stringify(randomTree(6)))
+root1 = JSON.parse(JSON.stringify(randomTree(6)))
 
-// console.log(root1);
+console.log(root1)
 
 function DFSRecursion(root, arr = []) {
   if (!root) return arr
@@ -68,5 +68,4 @@ function BFSwithQueue(root, arr = []) {
   }
   return arr
 }
-// console.log(BFS(root1));
-console.log(randomTree(10, 'string'))
+console.log(DFSRecursion(root1))
